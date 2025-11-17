@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        title= `${title}`
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        .wrapper
+            h1 Anime Characters
+            a(href="/update-cobj") Add to this table
+            table(border="1" cellpadding="5" cellspacing="0")
+                thead
+                    tr
+                        th Name
+                        th Series
+                        th Power Level
+                tbody
+                    if data.length
+                        each record in data
+                            tr
+                                td= record.properties.name
+                                td= record.properties.series
+                                td= record.properties.power_level
+                    else
+                        tr
+                            td(colspan="3") No records found

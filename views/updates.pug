@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+    head
+        title= `${title}`
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        .form-wrapper
+            h1 Add a New Anime Character
+            form(action="/update-cobj" method="POST")
+                label(for="name") Character Name:
+                input(type="text" name="name" id="name" required)
+                br
+                label(for="anime_series") Anime Series:
+                input(type="text" name="anime_series" id="anime_series" required)
+                br
+                label(for="power_level") Power Level:
+                input(type="number" name="power_level" id="power_level" required)
+                br
+                input(type="submit" value="Submit")
+            br
+            a(href="/") Return to Homepage
